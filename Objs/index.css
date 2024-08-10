@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.init {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../Imgs/init.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.aros {
+    width: 40vw;
+    height: 50vh;
+}
+
+.aro1 {
+    width: 38vw;
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.enterNoruto {
+    width: 25vw;
+    position: absolute;
+    left: 5vw;
+    top: 20vh;
+}
+
+.narutoTitulo {
+    width: 80vw;
+}
+
+.fondo1 {
+    width: 100vw;
+    height: 51vh;
+}
+
+.navegador {
+    background-color: rgb(5, 5, 5);
+}
+
+.navegador img {
+    height: 100%;
+}
+
+.fuego img {
+    height: 15vh;
+}
+
+.characters p {
+    border: solid rgba(172, 175, 7, 0.103) 1px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bodyIndex {
+    background-color: black;
+}
+
+.characters {
+    color: rgba(255, 140, 0, 0.281);
+    text-align: justify;
+    height: 89vh;
+}
+
+.section1 img {
+    
+    height: 89vh;
+}
+.villages{
+    background-image: url(../Imgs/fondo2.jpeg);
+}
+.villages, .kekkei, .kara, .tailed, .akatsuki{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.parrafoVillages{
+    background-color: rgba(243, 243, 235, 0.932);
+    font-weight:500
+}
+.kekkei{
+    background-image: url(../Imgs/fondo3.avif);
+}
+.kara{
+    background-image: url(../Imgs/FONDO4.webp);
+}
+.tailed{
+    background-image: url(../Imgs/fondo5.jpg);
+}
+.akatsuki{
+    background-image: url(../Imgs/fondo6.jpg);
+}
+.tituloSection{
+    height: 7vh;
+    max-width: 80vw;
+}
+#makeCategories{
+    background-color: rgba(173, 138, 22, 0.623);
+    align-items: center;
+}
+.footerIndex{
+    height: 35vh;
+    color: rgb(206, 206, 126);
+    background-color: black;
+    
+}
