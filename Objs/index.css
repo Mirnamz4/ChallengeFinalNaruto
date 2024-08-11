@@ -69,45 +69,93 @@
 }
 
 .section1 img {
-    
+
     height: 89vh;
 }
-.villages{
-    background-image: url(../Imgs/fondo2.jpeg);
-}
-.villages, .kekkei, .kara, .tailed, .akatsuki{
+
+.villages,
+.kekkei,
+.kara,
+.tailed,
+.akatsuki {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
 }
-.parrafoVillages{
-    background-color: rgba(243, 243, 235, 0.932);
-    font-weight:500
+
+.villages {
+    height: 130vh;
+    background-image: url(../Imgs/fondo2.jpeg);
 }
-.kekkei{
+
+
+.parrafoVillages {
+    background-color: rgba(243, 243, 235, 0.932);
+    font-weight: 500
+}
+
+.kekkei {
     background-image: url(../Imgs/fondo3.avif);
 }
-.kara{
+
+.kara {
     background-image: url(../Imgs/FONDO4.webp);
 }
-.tailed{
+
+.tailed {
     background-image: url(../Imgs/fondo5.jpg);
 }
-.akatsuki{
+
+.akatsuki {
     background-image: url(../Imgs/fondo6.jpg);
 }
-.tituloSection{
+
+.tituloSection {
     height: 7vh;
     max-width: 80vw;
 }
-#makeCategories{
-    background-color: rgba(173, 138, 22, 0.623);
+
+#makeCategories {
+    background-color: rgba(237, 244, 245, 0.87);
     align-items: center;
+    border-radius: 15px;
 }
-.footerIndex{
+
+.footerIndex {
     height: 35vh;
     color: rgb(206, 206, 126);
     background-color: black;
-    
+}
+
+.parrafoTailed {
+    border-radius: 30px;
+    color: rgb(20, 6, 82);
+    padding: 7vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px rgb(192, 169, 106) solid;
+    background-color: rgba(219, 181, 54, 0.555);
+
+}
+
+.parrafoAkatsuki {
+    border-radius: 30px;
+    color: wheat;
+    padding: 7vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px rgb(192, 169, 106) solid;
+    background-color: rgba(15, 0, 0, 0.555);
+}
+
+.parrafoKara {
+    border-radius: 30px;
+    color: wheat;
+    padding: 7vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px rgb(192, 169, 106) solid;
+    background-color: rgba(15, 0, 0, 0.555);
+}
+
+.containerDiv {
+    width: 100vw;
 }
