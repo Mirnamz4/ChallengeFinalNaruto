@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./Objs/index.css">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
 </head>
 
 <body>
@@ -21,27 +22,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mb-2 mb-lg-0 gap-3 mx-auto">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-5 mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-danger fs-5" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active fs-5" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Characters</a>
+                            <a class="nav-link fs-5" href="#">Characters</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Villages</a>
+                            <a class="nav-link fs-5" href="#">Villages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Kekkei Genkai</a>
+                            <a class="nav-link  fs-5" href="#">Kekkei Genkai</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Tailed Beasts</a>
+                            <a class="nav-link fs-5" href="#">Tailed Beasts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Clans</a>
+                            <a class="nav-link fs-5" href="#">Clans</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger fs-5" href="#">Akatsuki </a>
+                            <a class="nav-link fs-5" href="#">Akatsuki </a>
                         </li>
                     </ul>
                 </div>
@@ -50,34 +51,43 @@
     </header>
 
     <main class="bodyIndex" id="aplicacion">
-        <div class="d-flex justify-content-center">
-            <img class="my-5 narutoTitulo" src="./Imgs/homeNaruto.png" alt="">
-        </div>
-        <section class="characters container d-flex">
-            <div>
-                <p class="mt-4">Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells
-                    the story of
-                    Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the
-                    Hokage,
-                    the leader of his village. The story is told in two parts: the first is set in Naruto's pre-teen
-                    years
-                    (volumes 1–27), and the second in his teens (volumes 28–72). The series is based on two one-shot
-                    manga
-                    by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mention in Shueisha's monthly Hop
-                    Step Award the following year, and Naruto (1997).
+        <div class="container-fluid charactersFondo">
+            <div class="d-flex justify-content-center">
+                <img class="my-5 narutoTitulo" src="./Imgs/homeNaruto.png" alt="">
+            </div>
+            <section class="characters  d-flex">
+                <div>
+                    <p class="mt-4 parrafoPersonajes">Naruto is a Japanese manga series written and illustrated by
+                        Masashi
+                        Kishimoto. It tells
+                        the story of
+                        Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the
+                        Hokage,
+                        the leader of his village. The story is told in two parts: the first is set in Naruto's pre-teen
+                        years
+                        (volumes 1–27), and the second in his teens (volumes 28–72). The series is based on two one-shot
+                        manga
+                        by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mention in Shueisha's monthly
+                        Hop
+                        Step Award the following year, and Naruto (1997).
 
-                    Naruto was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from September 1999 to
-                    November 2014, with its chapters collected in 72 tankōbon volumes. </p>
-                <div class="verPersonajes ">
-                    <a href=""><img src="./Imgs/verpersonajes.png" alt=""></a>
+                        Naruto was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from September 1999
+                        to
+                        November 2014, with its chapters collected in 72 tankōbon volumes. </p>
+
+                    <div class="container-fluid d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
+                        id="contenedorPersonajes">
+                    </div>
+
+                    <div class="verPersonajes text-center" data-anijs="if: mouseover, on: .verPersonajes,
+                do: flash animated">
+                        <a href=""><img class="narutoTitulo my-5" src="./Imgs/verpersonajes.png" alt=""></a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="section1 mx-3">
-                <img src="./Imgs/section1.jfif" alt="">
-            </div>
-        </section>
-        <div class="containerDiv my-5 d-flex justify-content-center">
+            </section>
+        </div>
+        <div class="containerDivs py-5 d-flex justify-content-center">
             <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="">
         </div>
 
@@ -91,30 +101,20 @@
                     with huge military power, thanks to their hidden villages. The main focus is of course on
                     Konohagakure, also known as the Village Hidden by the Leaves, the hidden village of the Land of
                     Fire.</p>
-                <div id="carouselExampleCaptions" class="carousel slide mt-4">
-                    <div class="carousel-indicators" id="botones">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" id="carrucelVillages">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active villa">
                             <img src="./Imgs/Villas/0.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Amegakure</h5>
-                                <p>Characters: 32</p>
-                            </div>
+                            <h5 class="villaH">Amegakure</h5>
                         </div>
+
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -122,7 +122,8 @@
                 </div>
             </div>
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center">
+        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        do: flip animated">
             <img class="mt-4 tituloSection" src="./Imgs/kekkei.png" alt="">
         </div>
         <div class=" container-fluid kekkei">
@@ -134,10 +135,14 @@
                     Hashirama Senju's Wood Release. Likewise, most individuals with kekkei genkai only inherit one
                     kekkei genkai, however this is not always the case.</p>
             </div>
-            
 
+            <div class="container seeMore d-flex align-items-center justify-content-end">
+                <a href=""><img class="see me-3" src="./Imgs/seeMore.png" alt=""></a>
+                <a href=""><img src="./Imgs/flecha.png" alt=""></a>
+            </div>
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center">
+        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        do: flip animated">
             <img class="mt-4 tituloSection" src="./Imgs/kara.png" alt="">
         </div>
         <div class="container-fluid kara pt-4">
@@ -151,6 +156,26 @@
                     numeral and wears a black hooded cloak with coloured lining, fastened at the right shoulder with a
                     metal pin; all Inners are regarded as completely monstrous in power.</p>
             </div>
+            <div class="container d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
+                id="contenedorKara">
+            </div>
+        </div>
+        <div class="containerDiv container my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        do: flip animated">
+            <img class="mt-4 tituloSection" src="./Imgs/clans.png" alt="">
+        </div>
+        <div class="container-fluid clans pt-4">
+            <div class="container text-center">
+
+                <p class="parrafoClans my-4 fs-4">
+                    A clan (一族, Ichizoku, literally meaning: household, clan), in the loosest sense of the term, refers
+                    to a family or group of shinobi who form a basic unit of a shinobi village. A majority of these
+                    clans were mercenary military forces even before the First Shinobi World War.[1] The Senju clan and
+                    Uchiha clan were the first known clans to have agreed to settle and form a shinobi village,
+                    facilitated by creating agreements with the daimyō of the land they inhabit. Many clans would follow
+                    the example of the Senju and the Uchiha, later establishing the Five Great Shinobi Countries as they
+                    are known today.</p>
+            </div>
             <div class="container-fluid col-7 col-sm-4 text-center my-4 col-md-4 d-lg-flex gap-lg-2 col-lg-7 gap-xl-4 gap-xxl-5"
                 id="makeCategories">
                 <h6>Characters:</h6>
@@ -160,7 +185,7 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input fs-6 border-success" type="checkbox" id="checkbox2" value="10">
-                    <label class="form-check-label fw-medium fs-6" for="checkbox2">5 a 10</label>
+                    <label class="form-check-label fw-medium fs-6" for="checkbox2">6 a 10</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input fs-6 border-success" type="checkbox" id="checkbox3" value="15">
@@ -179,21 +204,23 @@
             </div>
 
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center">
+        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        do: rubberBand animated">
             <img class="mt-4 tituloSection" src="./Imgs/tailed.png" alt="">
         </div>
         <div class="container-fluid tailed pt-4">
             <div class="container text-center">
-                
+
                 <p class="parrafoTailed my-4 fs-4">
                     The tailed beasts (尾獣, bijū), sometimes referred to as "Chakra Monsters" (チャクラのバケモノ, Chakura no
                     Bakemono),[1] are the nine titanic living forms of chakra created by the Sage of Six Paths out of
                     the chakra from Earth's Ten-Tails.[2][3] They are differentiated by the number of tails they have,
                     ranging from one to nine.</p>
             </div>
-            
+
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center">
+        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        do: flip animated">
             <img class="tituloSection" src="./Imgs/akatsuki.png" alt="">
         </div>
         <div class="container-fluid akatsuki pt-4">
@@ -203,6 +230,8 @@
                     powerful: the Akatsuki. With their goal of creating a better world through their own means, the
                     Akatsuki has left a lasting impression on fans worldwide. In this guide, we will delve into the
                     history, members, and objectives of the Akatsuki, shedding light on this enigmatic organization.</p>
+
+                <img class="narutoTitulo" src="./Imgs/discoverAkatsuki.png" alt="">
             </div>
         </div>
 
@@ -235,5 +264,6 @@
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./Objs/index.js" type="module"></script>
+<script src="anijs-master/src/anijs.js"></script>
 
 </html>
