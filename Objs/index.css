@@ -26,7 +26,7 @@
 .videoInicio{
     border-radius: 10vw;
     max-height: 80vh;
-    max-width: 95vw;
+    width: 95vw;
 }
 .enterNoruto {
     width: 25vw;
@@ -82,13 +82,7 @@
     min-height: 160vh;
 }
 
-.parrafoPersonajes {
-    border-radius: 30px;
-    color: rgb(3, 3, 0);
-    padding: 2vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(255, 255, 255);
-}
+
 .moreCharacter{
     border: 1px black solid;
     background-color: rgba(218, 252, 29, 0.61);
@@ -127,10 +121,6 @@
 }
 
 
-.parrafoVillages {
-    background-color: rgba(243, 243, 235, 0.932);
-    font-weight: 500
-}
 
 .kekkei {
     background-image: url(../Imgs/fondo3.avif);
@@ -205,7 +195,17 @@
     background-color: rgba(219, 181, 54, 0.555);
 
 }
-
+.parrafoPersonajes {
+    border-radius: 30px;
+    color: rgb(3, 3, 0);
+    padding: 2vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+.parrafoVillages {
+    background-color: rgba(243, 243, 235, 0.932);
+    font-weight: 500
+}
 .parrafoAkatsuki {
     border-radius: 30px;
     color: wheat;
@@ -234,10 +234,6 @@
     border: 1px rgb(216, 204, 179) solid;
     background-color: rgba(27, 21, 21, 0.329);
 }
-.tituloClans{
-    border: 1px solid rgb(255, 255, 255);
-}
-
 
 .containerDiv {
     max-width: 100%;
