@@ -51,13 +51,16 @@
     </header>
 
     <main class="bodyIndex" id="aplicacion">
+        <div class="container-fluid pt-3 d-flex justify-content-center ">
+            <video class="videoInicio" src="./Imgs/inicio.mp4" type="video/mp4" loop autoplay muted></video>
+        </div>
         <div class="container-fluid charactersFondo">
-            <div class="d-flex justify-content-center">
+            <div class="d-flex bord justify-content-center">
                 <img class="my-5 narutoTitulo" src="./Imgs/homeNaruto.png" alt="">
             </div>
-            <section class="characters  d-flex">
-                <div>
-                    <p class="mt-4 parrafoPersonajes">Naruto is a Japanese manga series written and illustrated by
+            <div class="section1 container">
+                <div class="characters container ms-2 row d-flex">
+                    <p class="mt-4 fs-3 parrafoPersonajes">Naruto is a Japanese manga series written and illustrated by
                         Masashi
                         Kishimoto. It tells
                         the story of
@@ -74,18 +77,17 @@
                         Naruto was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from September 1999
                         to
                         November 2014, with its chapters collected in 72 tankōbon volumes. </p>
-
-                    <div class="container-fluid d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
+                    <div class="container d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
                         id="contenedorPersonajes">
                     </div>
 
-                    <div class="verPersonajes text-center" data-anijs="if: mouseover, on: .verPersonajes,
-                do: flash animated">
-                        <a href=""><img class="narutoTitulo my-5" src="./Imgs/verpersonajes.png" alt=""></a>
-                    </div>
                 </div>
 
-            </section>
+            </div>
+            <p class="moreCharacter mx-auto text-center">Click on the targets to show you more characters!</p>
+            <div class="d-flex justify-content-center container">
+                <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Characters  > > > </button>
+            </div>
         </div>
         <div class="containerDivs py-5 d-flex justify-content-center">
             <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="">
@@ -156,72 +158,53 @@
                     numeral and wears a black hooded cloak with coloured lining, fastened at the right shoulder with a
                     metal pin; all Inners are regarded as completely monstrous in power.</p>
             </div>
-            <div class="container d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
-                id="contenedorKara">
+            <div class="container d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5" id="contenedorKara">
             </div>
         </div>
-        <div class="containerDiv container my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        <div class="containerDiv tituloClans container py-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
         do: flip animated">
             <img class="mt-4 tituloSection" src="./Imgs/clans.png" alt="">
         </div>
         <div class="container-fluid clans pt-4">
-            <div class="container text-center">
+            <div class="container d-flex justify-content-center mt-4 text-center">
 
                 <p class="parrafoClans my-4 fs-4">
                     A clan (一族, Ichizoku, literally meaning: household, clan), in the loosest sense of the term, refers
                     to a family or group of shinobi who form a basic unit of a shinobi village. A majority of these
-                    clans were mercenary military forces even before the First Shinobi World War.[1] The Senju clan and
+                    clans were mercenary military forces even before the First Shinobi World War. The Senju clan and
                     Uchiha clan were the first known clans to have agreed to settle and form a shinobi village,
                     facilitated by creating agreements with the daimyō of the land they inhabit. Many clans would follow
                     the example of the Senju and the Uchiha, later establishing the Five Great Shinobi Countries as they
                     are known today.</p>
             </div>
-            <div class="container-fluid col-7 col-sm-4 text-center my-4 col-md-4 d-lg-flex gap-lg-2 col-lg-7 gap-xl-4 gap-xxl-5"
-                id="makeCategories">
-                <h6>Characters:</h6>
-                <div class="form-check">
-                    <input class="form-check-input fs-6 border-success" type="checkbox" id="checkbox1" value="5">
-                    <label class="form-check-label fw-medium fs-6" for="checkbox1">0 a 5</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-6 border-success" type="checkbox" id="checkbox2" value="10">
-                    <label class="form-check-label fw-medium fs-6" for="checkbox2">6 a 10</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-6 border-success" type="checkbox" id="checkbox3" value="15">
-                    <label class="form-check-label fw-medium fs-6" for="checkbox3">Más de 10</label>
-                </div>
-                <div
-                    class="container text-center pb-4 col-10 gap-sm-2 col-sm-10 col-md-2 pb-md-0 d-sm-flex col-md-6 align-self-center col-lg-4 col-xl-4 col-xxl-3">
-                    <input class="form-control my-2 border border-success" id="busqueda" type="search"
-                        placeholder="Search" aria-label="Search">
-                </div>
-
+            <div class="d-flex justify-content-center container">
+                <button type="button" class="btn fw-bolder mt-5 botonAll">See all Clans  > > > </button>
             </div>
 
-            <div class="container-fluid d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5"
-                id="contenedorTarjetas">
-            </div>
 
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        <div class="containerDiv tituloClans py-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
         do: rubberBand animated">
             <img class="mt-4 tituloSection" src="./Imgs/tailed.png" alt="">
         </div>
         <div class="container-fluid tailed pt-4">
             <div class="container text-center">
 
-                <p class="parrafoTailed my-4 fs-4">
+                <p class="parrafoKara mx-3 my-4 fs-4">
                     The tailed beasts (尾獣, bijū), sometimes referred to as "Chakra Monsters" (チャクラのバケモノ, Chakura no
-                    Bakemono),[1] are the nine titanic living forms of chakra created by the Sage of Six Paths out of
-                    the chakra from Earth's Ten-Tails.[2][3] They are differentiated by the number of tails they have,
+                    Bakemono), are the nine titanic living forms of chakra created by the Sage of Six Paths out of
+                    the chakra from Earth's Ten-Tails. They are differentiated by the number of tails they have,
                     ranging from one to nine.</p>
             </div>
-
+            <div class="contenedorVideo container d-flex justify-content-center ">
+                <video class="videoTailed" src="./Imgs/tailed.mp4" type="video/mp4" loop autoplay muted></video>
+                <button type="button" class="btn fw-bolder my-auto mx-auto botonAll">See more details  > > > </button>
+            </div>
+            
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
-        do: flip animated">
-            <img class="tituloSection" src="./Imgs/akatsuki.png" alt="">
+        <div class="containerDiv tituloClans py-5 d-flex justify-content-center">
+            <img class="tituloSection yey" src="./Imgs/akatsuki.png" data-anijs="if: mouseover, on: .yey
+            do: flip animated" alt="">
         </div>
         <div class="container-fluid akatsuki pt-4">
             <div class="container text-center">

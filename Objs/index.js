@@ -58,11 +58,11 @@ function change() {
 
                 let contenedorPersonajes = document.getElementById("contenedorPersonajes")
                 let tarjeta = document.createElement('div')
-                tarjeta.className = "card tarjetaTamaño col-md-4"
+                tarjeta.className = "card tarjetaCharacter"
                 tarjeta.id = `tarjetaTrans`
 
                 tarjeta.innerHTML = `
-    <img src="${data.images[0]}" class="card-img-top h-50 p-2">
+    <img src="${data.images[0]}" class="card-img-top p-2">
 
     <div class="card-body text-center d-flex row">
         <h5 class="card-title fw-bold"> ${data.name} </h5>
@@ -71,7 +71,7 @@ function change() {
             })
     }
 }
-document.getElementById("contenedorPersonajes").addEventListener('mouseenter', () => change())
+document.getElementById("contenedorPersonajes").addEventListener('click', () => change())
 
 kara()
 

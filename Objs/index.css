@@ -23,7 +23,11 @@
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-
+.videoInicio{
+    border-radius: 10vw;
+    max-height: 80vh;
+    max-width: 95vw;
+}
 .enterNoruto {
     width: 25vw;
     position: absolute;
@@ -43,6 +47,7 @@
 .navegador {
     border: rgb(12, 12, 12) solid 2px;
     font-weight: 800;
+    background-color: rgb(233, 171, 95);
 }
 
 .navegador img {
@@ -50,35 +55,61 @@
 }
 
 .fuego img {
-    height: 15vh;
+    height: 7vh;
+}
+.characters {
+    color: rgba(255, 140, 0, 0.281);
+    text-align: justify;
+    align-content: space-around;
+    margin-top: 9vh;
 }
 
 .characters p {
-    border: solid rgba(172, 175, 7, 0.103) 1px;
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
+}
+.bord{
+    border-bottom: 2px solid black;
 }
 
 .bodyIndex {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 
-#contenedorPersonajes {
-    min-height: 30vh;
+.charactersFondo {
+    background-image: url(../Imgs/fondo1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 160vh;
 }
 
-.characters {
-    width: 60vw;
-    color: rgba(255, 140, 0, 0.281);
-    text-align: justify;
-    min-height: 89vh;
+.parrafoPersonajes {
+    border-radius: 30px;
+    color: rgb(3, 3, 0);
+    padding: 2vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
 }
-
+.moreCharacter{
+    border: 1px black solid;
+    background-color: rgba(218, 252, 29, 0.61);
+    color: black;
+    width: 30vw;
+}
+.tarjetaCharacter{
+    width: 16rem;
+    height: 15rem;
+}
+.tarjetaCharacter img{
+   max-height: 17vh;
+}
+.botonAll{
+    height: 7vh;
+    background-color: rgb(194, 8, 8);
+    color: white;
+}
 .section1 img {
-
     height: 89vh;
 }
-
 .villages,
 .kekkei,
 .kara,
@@ -110,7 +141,7 @@
 }
 
 .tailed {
-    background-image: url(../Imgs/fondo5.jpg);
+    background-image: url(../Imgs/R.gif);
 }
 
 .akatsuki {
@@ -162,7 +193,7 @@
     min-height: 90vh;
     background-color: beige;
     background-position: center;
-    background-image: url(../Imgs/clansFondo.png);
+    background-image: url(../Imgs/clansFondo.jpg);
 }
 
 .parrafoTailed {
@@ -195,26 +226,18 @@
 
 .parrafoClans {
     border-radius: 30px;
-    color: rgb(8, 6, 0);
+    color: rgb(165, 142, 116);
     padding: 7vh;
+    align-self: center;
+    width: 30vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 3px rgb(15, 14, 11) solid;
-    background-color: rgba(243, 239, 239, 0.945);
+    border: 1px rgb(216, 204, 179) solid;
+    background-color: rgba(27, 21, 21, 0.329);
+}
+.tituloClans{
+    border: 1px solid rgb(255, 255, 255);
 }
 
-.charactersFondo {
-    background-image: url(../Imgs/fondo1.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-}
-
-.parrafoPersonajes {
-    border-radius: 30px;
-    color: rgb(12, 12, 12);
-    padding: 7vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(250, 250, 250);
-}
 
 .containerDiv {
     max-width: 100%;
@@ -243,4 +266,12 @@
     width: 6vw;
     height: 13vh;
     background-color: rgb(252, 249, 249);
+}
+.videoTailed{
+    width: 18vw;
+    border-radius: 15vw;
+    border: 8px rgb(0, 0, 0) solid;
+}
+.contenedorVideo{
+    width: 30vw;
 }
