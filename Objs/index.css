@@ -23,11 +23,13 @@
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-.videoInicio{
+
+.videoInicio {
     border-radius: 10vw;
     max-height: 80vh;
     width: 95vw;
 }
+
 .enterNoruto {
     width: 25vw;
     position: absolute;
@@ -57,6 +59,7 @@
 .fuego img {
     height: 7vh;
 }
+
 .characters {
     color: rgba(255, 140, 0, 0.281);
     text-align: justify;
@@ -64,10 +67,16 @@
     margin-top: 9vh;
 }
 
-.characters p {
-    font-family:'Courier New', Courier, monospace;
+.fuente p {
+    font-family: 'Courier New', Courier, monospace;
+
 }
-.bord{
+
+.characters p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bord {
     border-bottom: 2px solid black;
 }
 
@@ -75,63 +84,70 @@
     background-color: rgb(255, 255, 255);
 }
 
-.charactersFondo {
-    background-image: url(../Imgs/fondo1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 160vh;
-}
 
 
-.moreCharacter{
+.moreCharacter {
     border: 1px black solid;
     background-color: rgba(218, 252, 29, 0.61);
     color: black;
     width: 30vw;
 }
-.tarjetaCharacter{
+
+.tarjetaCharacter {
     width: 16rem;
-    height: 15rem;
+    height: 17rem;
 }
-.tarjetaCharacter img{
-   max-height: 17vh;
+
+.tarjetaCharacter img {
+    max-height: 17vh;
 }
-.botonAll{
+
+.botonAll {
     height: 7vh;
     background-color: rgb(194, 8, 8);
     color: white;
 }
+
 .section1 img {
     height: 89vh;
 }
-.villages,
+
+.villages {
+    background-repeat: no-repeat;
+}
+
 .kekkei,
 .kara,
 .tailed,
 .akatsuki {
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     background-position: center;
     min-height: 100vh;
 }
 
-.villages {
-    min-height: 130vh;
-    background-image: url(../Imgs/fondo2.jpeg);
+.charactersFondo {
+    background-image: url(../Imgs/fondo1.jpg);
+    background-position: center;
+    min-height: 160vh;
 }
 
+.tailed {
+    background-image: url(../Imgs/FONDO7.png);
+    background-size: contain;
+}
 
+.villages {
+    min-height: 130vh;
+    background-image: url(../Imgs/villagesFondoC.png);
+}
 
 .kekkei {
-    background-image: url(../Imgs/fondo3.avif);
+    background-image: url(../Imgs/fondo3.webp);
 }
 
 .kara {
     background-image: url(../Imgs/FONDO4.webp);
-}
-
-.tailed {
-    background-image: url(../Imgs/R.gif);
 }
 
 .akatsuki {
@@ -175,47 +191,22 @@
     border: solid black 3px;
 }
 
-.starVacia {
-    width: 2vw;
-}
-
 .clans {
     min-height: 90vh;
     background-color: beige;
     background-position: center;
     background-image: url(../Imgs/clansFondo.jpg);
+    background-repeat: no-repeat;
 }
 
-.parrafoTailed {
-    border-radius: 30px;
-    color: rgb(20, 6, 82);
-    padding: 7vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px rgb(192, 169, 106) solid;
-    background-color: rgba(219, 181, 54, 0.555);
-
-}
 .parrafoPersonajes {
     border-radius: 30px;
     color: rgb(3, 3, 0);
     padding: 2vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(255, 255, 255);
 }
-.parrafoVillages {
-    background-color: rgba(243, 243, 235, 0.932);
-    font-weight: 500
-}
-.parrafoAkatsuki {
-    border-radius: 30px;
-    color: wheat;
-    padding: 7vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px rgb(192, 169, 106) solid;
-    background-color: rgba(15, 0, 0, 0.555);
-}
 
-.parrafoKara {
+.parrafoAkatsuki {
     border-radius: 30px;
     color: wheat;
     padding: 7vh;
@@ -229,10 +220,18 @@
     color: rgb(165, 142, 116);
     padding: 7vh;
     align-self: center;
-    width: 30vw;
+    width: 45vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px rgb(216, 204, 179) solid;
+    border: 1px rgb(213, 243, 41) solid;
     background-color: rgba(27, 21, 21, 0.329);
+}
+
+.parrafoKara {
+    border-radius: 30px;
+    border: 1px rgb(213, 243, 41) solid;
+    background-color: rgba(27, 21, 21, 0.712);
+    color: white;
+    padding: 7vh;
 }
 
 .containerDiv {
@@ -241,33 +240,58 @@
 
 .containerDivs {
     max-width: 100%;
-    border: solid 1px rgb(253, 252, 253);
+    border-bottom: 1px black solid;
 }
 
-.seeMore {
-    height: 40vh;
-    background-color: rgba(75, 74, 64, 0.226);
-}
-
-.seeMore img {
-    width: 15vw;
-}
-
-.see {
-    background-color: rgb(3, 28, 82);
-    border-radius: 10px;
+.containerBlack {
+    background-color: black;
 }
 
 .tarjetaTamañoK {
-    width: 6vw;
-    height: 13vh;
-    background-color: rgb(252, 249, 249);
+    width: 12rem;
+    height: 14rem;
+    background-color: rgba(253, 250, 250, 0.856);
 }
-.videoTailed{
-    width: 18vw;
+
+.videoTailed {
+    height: 50%;
     border-radius: 15vw;
-    border: 8px rgb(0, 0, 0) solid;
+    border: 8px rgba(252, 252, 252, 0.507) solid;
 }
-.contenedorVideo{
-    width: 30vw;
+
+.contenedorVideo {
+    height: 70vh;
+    background-image: url(../Imgs/fondo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.kekkeiL {
+    width: 40vw;
+}
+
+.backDark {
+    background-color: black;
+}
+.responsiveTailed{
+    text-align: justify;
+    width: 95vw;
+}
+
+@media (max-width:722px) {
+    .responsiveTailed p {
+        width: 89vw;
+        margin-inline: auto;
+    }
+
+    .contenedorVideo {
+        width: 70vw;
+    }
+    .kekkeiL {
+        width: 95vw;
+    }
+    .parrafoClans{
+        width: 90vw;
+    }
 }
