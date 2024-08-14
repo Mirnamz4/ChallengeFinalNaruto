@@ -10,12 +10,26 @@
     background-repeat: repeat-y;
     background-size: contain;
 }
-
+#charactersVillas{
+    background-color: black;
+}
+.tituloVi{
+    background-color: orange;
+}
 .tarjetaVilla {
     width: 30rem;
     background-color: rgba(255, 202, 103, 0.452);
     height: 30rem;
-    border: 4px black solid;
+    border: 4px rgb(73, 64, 64) solid;
+}
+.detai{
+    background-color: rgb(241, 220, 192);
+    width: 18rem;
+    border-radius: 20px;
+}
+.dividir{
+    background-color: white;
+    height: 7vh;
 }
 .foto{
     border-radius: 25px;
@@ -30,7 +44,7 @@
 }
 .detalles{
     background-color: black;
-    height: 100vh;
+    min-height: 100vh;
 }
 #detailsB{
     position: absolute;

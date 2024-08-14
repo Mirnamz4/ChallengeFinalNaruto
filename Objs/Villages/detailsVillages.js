@@ -8,6 +8,16 @@ imagend.innerHTML = `
 <img src="../../Imgs/Villas/${idMagik}.png " class="card-img-top h-50 p-2"> `
 contenedorc.appendChild(imagend)
 
+fetch("https://narutodb.xyz/api/village/" + idMagik)
+    .then(response => response.json())
+    .then(data => {
+        let nombre = document.createElement('div')
+        nombre.innerHTML = `
+<h5 class="card-title text-center fs-2 tituloVi fw-bold"> ${data.name} </h5>`
+        contenedorc.appendChild(nombre)
+    })
+
+
 obtenerPersonajes(idMagik)
 
 function obtenerPersonajes(number) {
@@ -29,9 +39,9 @@ function pintarPersonajesVillas(array) {
                 .then(response => response.json())
                 .then(data => {
                     let tarjeta = document.createElement('div')
-                    tarjeta.className = "card col-md-4"
+                    tarjeta.className = "card detai col-md-4"
                     tarjeta.innerHTML = `
-// <img src="${data.images[0]} " class="card-img-top h-50 p-2">
+<img src="${data.images[0]|| '../../Imgs/incognito.jpg' }  " class="card-img-top h-50 p-2">
 
 <div class="card-body text-center d-flex row">
 <h5 class="card-title fw-bold"> ${data.name} </h5>
@@ -40,12 +50,12 @@ function pintarPersonajesVillas(array) {
                 })
         }
     }
-    else{
+    else {
         let contenedorPerson = document.getElementById("charactersVillas")
         let tarjeta = document.createElement('div')
-                    tarjeta.className = "card col-md-4 fw-bolder text-center"
-                    tarjeta.innerHTML = `Characters Not Found :( `
-                    contenedorPerson.appendChild(tarjeta)
+        tarjeta.className = "card col-md-4 fw-bolder text-center"
+        tarjeta.innerHTML = `Characters Not Found :( `
+        contenedorPerson.appendChild(tarjeta)
     }
 }
 
