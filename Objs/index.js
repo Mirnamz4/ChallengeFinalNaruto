@@ -45,7 +45,7 @@ function change() {
 
     let limpiar = document.getElementById("contenedorPersonajes")
     limpiar.innerHTML = ''
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 25; i++) {
 
         let numberMagic = parseInt(generateRandom(1430))
         function generateRandom(max) {
@@ -65,10 +65,7 @@ function change() {
                 tarjeta.innerHTML = ` 
                 <img src="${data.images[0]}" class="card-img-top p-2">
   
-
-    <div class="card-body text-center d-flex row">
-        <h5 class="card-title fw-bold"> ${data.name} </h5>
-    </div> `
+`
                 contenedorPersonajes.appendChild(tarjeta)
             })
     }

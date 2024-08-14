@@ -57,7 +57,7 @@
 }
 
 .fuego img {
-    height: 7vh;
+    height: 10vh;
 }
 
 .characters {
@@ -81,7 +81,7 @@
 }
 
 .bodyIndex {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -94,18 +94,20 @@
 }
 
 .tarjetaCharacter {
-    width: 16rem;
-    height: 17rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 .tarjetaCharacter img {
-    max-height: 17vh;
+    max-height: 6vh;
 }
 
 .botonAll {
-    height: 7vh;
-    background-color: rgb(194, 8, 8);
-    color: white;
+    width: 12vw;
+    height: 6vh;
+    background-color: rgb(247, 174, 90);
+    color: rgb(0, 0, 0);
+    border: 3px black solid;
 }
 
 .section1 img {
@@ -139,7 +141,9 @@
 
 .villages {
     min-height: 130vh;
-    background-image: url(../Imgs/villagesFondoC.png);
+    background-color: white;
+    background-image: url(../Imgs/fondoVillages.png);
+    background-repeat: repeat;
 }
 
 .kekkei {
@@ -193,9 +197,8 @@
 
 .clans {
     min-height: 90vh;
-    background-color: beige;
-    background-position: center;
-    background-image: url(../Imgs/clansFondo.jpg);
+    background-color: white;
+    background-image: url(../Imgs/villagesFondoC.png);
     background-repeat: no-repeat;
 }
 
@@ -204,6 +207,13 @@
     color: rgb(3, 3, 0);
     padding: 2vh;
     background-color: rgb(255, 255, 255);
+}
+.parrafo{
+    border-radius: 30px;
+    color: rgb(3, 3, 0);
+    padding: 2vh;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
 }
 
 .parrafoAkatsuki {
@@ -254,12 +264,13 @@
 }
 
 .videoTailed {
+    width: 100vw;
     height: 50%;
-    border-radius: 15vw;
     border: 8px rgba(252, 252, 252, 0.507) solid;
 }
 
 .contenedorVideo {
+    max-width: 90vw;
     height: 70vh;
     background-image: url(../Imgs/fondo.png);
     background-size: contain;
@@ -278,8 +289,10 @@
     text-align: justify;
     width: 95vw;
 }
-
-@media (max-width:722px) {
+@media (max-width:924px)and (min-width:723px){
+    .botonAll {
+        width: 19vw;
+    }
     .responsiveTailed p {
         width: 89vw;
         margin-inline: auto;
@@ -294,4 +307,30 @@
     .parrafoClans{
         width: 90vw;
     }
+}
+
+
+@media (max-width:722px) {
+    .responsiveTailed p {
+        width: 89vw;
+        margin-inline: auto;
+    }
+    .botonAll {
+        width: 33vw;
+    }
+
+    .contenedorVideo {
+        width: 70vw;
+    }
+    .kekkeiL {
+        width: 95vw;
+    }
+    .parrafoClans {
+        width: 90vw
+    }
+    .parrafoPersonajes{
+        width: 100vw;
+        text-align: justify;
+    }
+    
 }
