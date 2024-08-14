@@ -9,14 +9,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./Objs/index.css">
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="icon" href="./Imgs/favicon.jpg" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar p-0 navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid navegador">
                 <a class="navbar-brand fuego" href="#"><img src="./Imgs/fuego.png" alt=""></a>
-                <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -33,7 +34,7 @@
                             <a class="nav-link fs-5" href="./Objs/Villages/villages.html">Villages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  fs-5" href="#">Kekkei Genkai</a>
+                            <a class="nav-link  fs-5" href="./Objs/Kekkei/Genkai.html">Kekkei Genkai</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-5" href="#">Tailed Beasts</a>
@@ -51,15 +52,16 @@
     </header>
 
     <main class="bodyIndex" id="aplicacion">
-        <div class="container-fluid pt-3 d-flex justify-content-center ">
+        <div class="container-fluid pt-3 pb-3 d-flex justify-content-center ">
             <video class="videoInicio" src="./Imgs/inicio.mp4" loop autoplay muted></video>
         </div>
-        <div class="container-fluid charactersFondo">
+        <div class="container-fluid p-3 charactersFondo">
             <div class="d-flex bord justify-content-center">
-                <img class="my-5 narutoTitulo" src="./Imgs/homeNaruto.png" alt="">
+                <img class="my-5 narutoTitulo" src="./Imgs/homeNaruto.png" alt="" data-anijs="if: mouseover, on: .narutoTitulo,
+                do: rotateInUpLeft animated">
             </div>
-            <div class="section1 container">
-                <div class="characters container ms-2 row d-flex">
+            <div class="section1 container-fluid">
+                <div class="characters container-fluid ms-2 row d-flex">
                     <p class="mt-4 fs-3 parrafoPersonajes">Naruto is a Japanese manga series written and illustrated by
                         Masashi
                         Kishimoto. It tells
@@ -84,22 +86,19 @@
                 </div>
 
             </div>
-            <p class="moreCharacter mx-auto text-center">Click on the targets to show you more characters!</p>
             <div class="d-flex justify-content-center container">
-                <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Characters > > > </button>
+                <button type="button" class="btn fw-bolder mt-5 botonAll">Characters</button>
             </div>
         </div>
-        <div class="containerBlack  py-5 d-flex justify-content-center">
-
-        </div>
-
-        <div class="container-fluid d-flex-column align-items-center  villages pt-4">
-            <div class="containerDivs py-5 d-flex justify-content-center">
-                <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
+        <div class="containerDivs py-5 d-flex justify-content-center">
+            <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
                 do: rubberBand animated">
-            </div>
+        </div>
+        <div class="container-fluid d-flex-column align-items-center p-3 villages pt-4">
+
             <div class="container w-100 h-75 text-center fuente ">
-                <p class="parrafoPersonajes parrafo my-5 fs-4">The world of Naruto is rich with different lands and villages. In
+                <p class="parrafo my-5 fs-4">The world of Naruto is rich with different lands and
+                    villages. In
                     the Naruto World, most nations
                     operate with a hidden shinobi village of their own, which provides military support for the nation.
                     There are five big nations, namely the Land of Fire, Land of Wind, Land of Earth, Land of Water and
@@ -126,35 +125,39 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-        </div>
-        <div class="containerBlack  py-5 d-flex justify-content-center">
+                <div class="d-flex justify-content-center container">
+                    <a href="./Objs/Villages/villages.html"><button type="button"
+                            class="btn fw-bolder mt-5 botonAll">Details</button></a>
 
+                </div>
+            </div>
         </div>
         <div class="containerDiv containerDivs py-5 d-flex justify-content-center">
             <img class="mt-4 tituloSection" src="./Imgs/kekkei.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
                 do: rubberBand animated">
         </div>
+        <div class="contenedorOjo d-flex justify-content-center">
+            <video class="videoOjo w-50 " src="./Imgs/ojo.mp4" autoplay muted></video>
+        </div>
+        <div class="containerBlack  py-5 d-flex justify-content-center">
+
+        </div>
         <div class=" container-fluid kekkei">
 
-            <div class="kekkeiL text-center pt-4 fuente ">
+            <div class="kekkeiL p-3 text-center pt-4 fuente ">
 
-                <p class="parrafoPersonajes pt-5 my-4 fs-4">
+                <p class="parrafo pt-5 my-4 fs-4">
                     Kekkei genkai (血継限界, literally meaning: Bloodline Limit) are DNA anomalies that allow their wielders
                     to use unique techniques. A kekkei genkai's name describes both the anomaly and the resulting
                     technique. Most kekkei genkai are passed down between generations of a clan, an exception being
                     Hashirama Senju's Wood Release. Likewise, most individuals with kekkei genkai only inherit one
                     kekkei genkai, however this is not always the case.</p>
                 <div class="d-flex justify-content-center container">
-                    <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Information > > >
-                    </button>
+                    <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">Details</button>
                 </div>
             </div>
 
 
-
-        </div>
-        <div class="containerBlack  py-5 d-flex justify-content-center">
 
         </div>
         <div class="containerDiv tituloClans py-5 d-flex justify-content-center">
@@ -170,41 +173,22 @@
                     Bakemono), are the nine titanic living forms of chakra created by the Sage of Six Paths out of
                     the chakra from Earth's Ten-Tails. They are differentiated by the number of tails they have,
                     ranging from one to nine.</p>
-                <button type="button" class="btn fw-bolder ms-5 botonAll">See more details > > > </button>
+                <button type="button" class="btn fw-bolder ms-5 botonAll">Details</button>
             </div>
             <div class="contenedorVideo pb-4 container d-flex justify-content-center align-items-center">
                 <video class="videoTailed" src="./Imgs/tailed.mp4" loop autoplay muted></video>
             </div>
 
         </div>
-        <div class="containerDiv py-5 backDark d-flex justify-content-center">
-            <img class="mt-4 tituloSection" src="./Imgs/kara.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
-        do: flip animated">
-        </div>
-        <div class="container text-center fuente">
-            <p class="parrafoCharacters my-5 p-3 fs-4">
-                Kara (殻カラ, Viz: The Husk, literally meaning: "Shell" or "Husk") is a secret society[1] formerly led
-                by Isshiki Ōtsutsuki, and later by Code.
-
-                The group is made up of "Inners" (内陣インナー, Innā) and "Outers" (外陣アウトー, Autō), with each of the Inners
-                being in charge of a particular region. Each Inner appears to bear a facial tattoo of a Roman
-                numeral and wears a black hooded cloak with coloured lining, fastened at the right shoulder with a
-                metal pin; all Inners are regarded as completely monstrous in power.</p>
-        </div>
-        <div class="container-fluid kara pt-4">
-
-            <div class="container-fluid d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5" id="contenedorKara">
-            </div>
-        </div>
 
         <div class="containerDiv backDark tituloClans container py-5 d-flex justify-content-center">
             <img class="mt-4 tituloSection" src="./Imgs/clans.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
         do: flip animated">
         </div>
-        <div class="container-fluid clans pt-4">
-            <div class="container d-flex justify-content-center mt-4 text-center">
+        <div class="container-fluid p-4 clans ">
+            <div class="container-fluid p-4 d-flex justify-content-center mt-4 fuente text-center">
 
-                <p class="parrafoClans my-4 fs-4">
+                <p class="parrafoPersonajes mt-4 fs-4">
                     A clan (一族, Ichizoku, literally meaning: household, clan), in the loosest sense of the term, refers
                     to a family or group of shinobi who form a basic unit of a shinobi village. A majority of these
                     clans were mercenary military forces even before the First Shinobi World War. The Senju clan and
@@ -214,25 +198,13 @@
                     are known today.</p>
             </div>
             <div class="d-flex justify-content-center container">
-                <button type="button" class="btn fw-bolder mt-5 botonAll">See all Clans > > > </button>
+                <button type="button" class="btn fw-bolder mt-5 botonAll">Clans </button>
+            </div>
+            <div class="container-fluid w-100 d-flex justify-content-center">
+                <img class="roll w-25" src="./Imgs/shuriken.png " alt="shuriken" data-anijs="if: mouseover, on: .roll,
+                do: rollOut animated">
             </div>
 
-
-        </div>
-        <div class="containerDiv backDark tituloClans py-5 d-flex justify-content-center">
-            <img class="tituloSection" src="./Imgs/akatsuki.png" data-anijs="if: mouseover, on: .tituloSection,
-            do: flip animated" alt="">
-        </div>
-        <div class="container-fluid akatsuki pt-4">
-            <div class="container text-center">
-                <p class="parrafoAkatsuki my-4 fs-4">
-                    In the vast world of the Naruto anime and manga series, one group stands out as both mysterious and
-                    powerful: the Akatsuki. With their goal of creating a better world through their own means, the
-                    Akatsuki has left a lasting impression on fans worldwide. In this guide, we will delve into the
-                    history, members, and objectives of the Akatsuki, shedding light on this enigmatic organization.</p>
-
-                <img class="narutoTitulo" src="./Imgs/discoverAkatsuki.png" alt="">
-            </div>
         </div>
 
     </main>
