@@ -29,7 +29,7 @@
     transform: rotate(310deg)
 }
 .detalles{
-    background-image: url(../../Imgs/detailsVillages.webp);
+    background-color: black;
     height: 100vh;
 }
 #detailsB{
