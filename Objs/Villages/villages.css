@@ -4,25 +4,40 @@
 }
 
 .villagesMain {
-    background-image: url(../../Imgs/fondoVillages.jpg);
+    background-image: url(../../Imgs/aldeasLogos.png);
     min-height: 100vh;
     background-position: center;
+    background-repeat: repeat-y;
+    background-size: contain;
 }
 
 .tarjetaVilla {
-    width: 18rem;
-    background-color: rgb(255, 255, 255);
-    height: 20rem;
+    width: 30rem;
+    background-color: rgba(255, 202, 103, 0.452);
+    height: 30rem;
+    border: 4px black solid;
+}
+.foto{
+    border-radius: 25px;
 }
 .villagesTitle{
     height: 20vh;
-    background-color: rgb(238, 219, 168);
+    background-color: black;
 }
-.villagesTitle img{
-    max-width: 90vw;
-
+.js{
+    width: 35%;
+    transform: rotate(310deg)
 }
 .detalles{
     background-image: url(../../Imgs/detailsVillages.webp);
     height: 100vh;
+}
+#detailsB{
+    position: absolute;
+    left: 8rem;
+    bottom: 0; 
+    background-color: rgb(247, 174, 90);
+    color: rgb(0, 0, 0);
+    border: 3px black solid;
+    font-weight: 600;
 }

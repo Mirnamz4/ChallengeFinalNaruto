@@ -11,14 +11,16 @@ export function pintarVillas() {
                 tarjeta.id = `tarjetaTrans`
 
                 tarjeta.innerHTML = `
-            <img src="../../Imgs/Villas/${i}.png " class="card-img-top h-50 p-2">
+            <img src="../../Imgs/Villas/${i}.png " class="card-img-top foto h-50 p-2">
         
             <div class="card-body text-center d-flex row">
                 <h5 class="card-title fw-bold"> ${data.name} </h5>
                 <h5 class="card-title fw-bold"> Characters: ${data.characters.length} </h5>
-              <div class="d-flex justify-content-between align-self-end">
-                <a href="./detailsVillages.html?id=${data.id}" class="btn btn-primary ms-auto" id="detailsB">Characters</a>  
+              <div class="d-flex justify-content-center">
+                <a href="./detailsVillages.html?id=${data.id}" class="btn w-50 mb-2 " id="detailsB">Characters</a>  
             </div>
+    <img class="js ms-auto mb-4 " src="../../Imgs/boton.png" alt=""  data-anijs="if: mouseover, on: .js,
+                do: wobble animated"
                 </div> `
                 contenedorVillages.appendChild(tarjeta)
             })
