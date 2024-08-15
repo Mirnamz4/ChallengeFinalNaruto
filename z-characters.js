@@ -1,14 +1,14 @@
 import * as zir from "./z-mod.js";
 
-let url = "https://narutodb.xyz/api/character"
+let url = "https://narutodb.xyz/api/character?page=1&limit=10"
 
 fetch(url)
     .then(resp => resp.json())
     .then(response => {
-        
+
         let data = response
         console.log(data);
-        
+
         let characters = data.characters
 
         let categories = zir.identifyCategories(characters)
@@ -16,7 +16,7 @@ fetch(url)
         let cardContainer = document.getElementById("cardContainer")
 
         zir.paintCheckBox(categories, checkBoxContainer)
-/*         zir.paintCards(characters, cardContainer)
+        zir.paintCards(characters, cardContainer)
 
         let checkBoxes = document.querySelectorAll('input[type = "checkbox"]')
         let textSearch = document.getElementById("textSearch")
@@ -33,5 +33,5 @@ fetch(url)
             let charactersFilter = zir.filterText(characters)
             charactersFilter = zir.filterCategory(charactersFilter)
             zir.paintCards(charactersFilter, cardContainer)
-        }) */
+        })
     })
