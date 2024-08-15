@@ -3,10 +3,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     /* background-color: #f15b04; */
-    background-color: #17141d;
+    background-color: #ffffff;
     /* background-image: url(./naruto-manga-pictures-t44lxgnk8jlfh1ab.jpg); */
     background-position: center;
-    
 }
 
 /* Estilos intro sección */
@@ -58,18 +57,17 @@ body {
     font-weight: 300;
     color: #ddd;
 }
-
 .separador {
     display: flex;
     justify-content: flex-end;
     height: 200px;
-    width: 100%;
+    width: 100vw;
 }
 
 .kekkei-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 20px;
     padding: 20px;
 }
@@ -78,7 +76,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
     z-index: -1;
@@ -88,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: 100vw;
 }
 
 .card-container {
@@ -237,7 +235,7 @@ body {
     width: 100%;
 }
   
-  #sec{
+#sec{
     height: 200px;
     width: 100%;
     object-fit: cover;

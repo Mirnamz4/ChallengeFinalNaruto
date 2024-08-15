@@ -71,6 +71,9 @@
     font-family: 'Courier New', Courier, monospace;
 
 }
+.contacto{
+    min-height: 64vh;
+}
 
 .characters p {
     font-family: 'Courier New', Courier, monospace;

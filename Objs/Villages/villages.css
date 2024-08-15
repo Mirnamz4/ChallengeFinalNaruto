@@ -42,6 +42,9 @@
     height: 20vh;
     background-color: black;
 }
+.villagesTitle img{
+    max-width: 80vw;
+}
 .js{
     width: 35%;
     transform: rotate(310deg)
