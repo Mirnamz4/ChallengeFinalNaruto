@@ -1,0 +1,8 @@
+/* Puedes agregar esto en el archivo CSS o en una etiqueta <style> en tu HTML */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table th, .table td {
+    text-align: center;
+}
