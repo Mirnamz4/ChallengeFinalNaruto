@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.villagesMain {
+    background-image: url(../../Imgs/fondoVillages.jpg);
+    min-height: 100vh;
+    background-position: center;
+}
+
+.tarjetaVilla {
+    width: 18rem;
+    background-color: rgb(255, 255, 255);
+    height: 20rem;
+}
+.villagesTitle{
+    height: 20vh;
+    background-color: rgb(238, 219, 168);
+}
+.villagesTitle img{
+    max-width: 90vw;
+
+}
+.detalles{
+    background-image: url(../../Imgs/detailsVillages.webp);
+    height: 100vh;
+}

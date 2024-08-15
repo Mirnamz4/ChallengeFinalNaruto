@@ -30,7 +30,7 @@
                             <a class="nav-link fs-5" href="#">Characters</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-5" href="#">Villages</a>
+                            <a class="nav-link fs-5" href="./Objs/Villages/villages.html">Villages</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link  fs-5" href="./Objs/Kekkei/Genkai.html">Kekkei Genkai</a>
@@ -52,7 +52,7 @@
 
     <main class="bodyIndex" id="aplicacion">
         <div class="container-fluid pt-3 d-flex justify-content-center ">
-            <video class="videoInicio" src="./Imgs/inicio.mp4" type="video/mp4" loop autoplay muted></video>
+            <video class="videoInicio" src="./Imgs/inicio.mp4" loop autoplay muted></video>
         </div>
         <div class="container-fluid charactersFondo">
             <div class="d-flex bord justify-content-center">
@@ -86,16 +86,20 @@
             </div>
             <p class="moreCharacter mx-auto text-center">Click on the targets to show you more characters!</p>
             <div class="d-flex justify-content-center container">
-                <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Characters  > > > </button>
+                <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Characters > > > </button>
             </div>
         </div>
-        <div class="containerDivs py-5 d-flex justify-content-center">
-            <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="">
+        <div class="containerBlack  py-5 d-flex justify-content-center">
+
         </div>
 
-        <div class="container-fluid villages pt-4">
-            <div id="sect1" class="container text-center ">
-                <p class="parrafoKara my-4 fs-4">The world of Naruto is rich with different lands and villages. In
+        <div class="container-fluid d-flex-column align-items-center  villages pt-4">
+            <div class="containerDivs py-5 d-flex justify-content-center">
+                <img class="mt-4 tituloSection" src="./Imgs/villages.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
+                do: rubberBand animated">
+            </div>
+            <div class="container w-100 h-75 text-center fuente ">
+                <p class="parrafoPersonajes parrafo my-5 fs-4">The world of Naruto is rich with different lands and villages. In
                     the Naruto World, most nations
                     operate with a hidden shinobi village of their own, which provides military support for the nation.
                     There are five big nations, namely the Land of Fire, Land of Wind, Land of Earth, Land of Water and
@@ -103,7 +107,7 @@
                     with huge military power, thanks to their hidden villages. The main focus is of course on
                     Konohagakure, also known as the Village Hidden by the Leaves, the hidden village of the Land of
                     Fire.</p>
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleAutoplaying" class="carousel slide carrucelTamaño" data-bs-ride="carousel">
                     <div class="carousel-inner" id="carrucelVillages">
                         <div class="carousel-item active villa">
                             <img src="./Imgs/Villas/0.png" class="d-block w-100" alt="...">
@@ -124,46 +128,78 @@
                 </div>
             </div>
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
-        do: flip animated">
-            <img class="mt-4 tituloSection" src="./Imgs/kekkei.png" alt="">
+        <div class="containerBlack  py-5 d-flex justify-content-center">
+
+        </div>
+        <div class="containerDiv containerDivs py-5 d-flex justify-content-center">
+            <img class="mt-4 tituloSection" src="./Imgs/kekkei.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
+                do: rubberBand animated">
         </div>
         <div class=" container-fluid kekkei">
-            <div class="container text-center pt-4">
-                <p class="parrafoKara my-4 fs-4">
+
+            <div class="kekkeiL text-center pt-4 fuente ">
+
+                <p class="parrafoPersonajes pt-5 my-4 fs-4">
                     Kekkei genkai (血継限界, literally meaning: Bloodline Limit) are DNA anomalies that allow their wielders
                     to use unique techniques. A kekkei genkai's name describes both the anomaly and the resulting
                     technique. Most kekkei genkai are passed down between generations of a clan, an exception being
                     Hashirama Senju's Wood Release. Likewise, most individuals with kekkei genkai only inherit one
                     kekkei genkai, however this is not always the case.</p>
+                <div class="d-flex justify-content-center container">
+                    <button type="button" class="btn btn-danger fw-bolder mt-5 botonAll">See all Information > > >
+                    </button>
+                </div>
             </div>
 
-            <div class="container seeMore d-flex align-items-center justify-content-end">
-                <a href=""><img class="see me-3" src="./Imgs/seeMore.png" alt=""></a>
-                <a href=""><img src="./Imgs/flecha.png" alt=""></a>
-            </div>
+
+
         </div>
-        <div class="containerDiv my-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+        <div class="containerBlack  py-5 d-flex justify-content-center">
+
+        </div>
+        <div class="containerDiv tituloClans py-5 d-flex justify-content-center">
+            <img class="mt-4 tituloSection" src="./Imgs/tailed.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
+        do: rubberBand animated">
+        </div>
+        <div class="container-fluid tailed pt-4">
+
+            <div class="w-50 ms-md-auto  responsiveTailed fuente ">
+
+                <p class="parrafoPersonajes  mx-3 my-4 fs-5">
+                    The tailed beasts (尾獣, bijū), sometimes referred to as "Chakra Monsters" (チャクラのバケモノ, Chakura no
+                    Bakemono), are the nine titanic living forms of chakra created by the Sage of Six Paths out of
+                    the chakra from Earth's Ten-Tails. They are differentiated by the number of tails they have,
+                    ranging from one to nine.</p>
+                <button type="button" class="btn fw-bolder ms-5 botonAll">See more details > > > </button>
+            </div>
+            <div class="contenedorVideo pb-4 container d-flex justify-content-center align-items-center">
+                <video class="videoTailed" src="./Imgs/tailed.mp4" loop autoplay muted></video>
+            </div>
+
+        </div>
+        <div class="containerDiv py-5 backDark d-flex justify-content-center">
+            <img class="mt-4 tituloSection" src="./Imgs/kara.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
         do: flip animated">
-            <img class="mt-4 tituloSection" src="./Imgs/kara.png" alt="">
+        </div>
+        <div class="container text-center fuente">
+            <p class="parrafoCharacters my-5 p-3 fs-4">
+                Kara (殻カラ, Viz: The Husk, literally meaning: "Shell" or "Husk") is a secret society[1] formerly led
+                by Isshiki Ōtsutsuki, and later by Code.
+
+                The group is made up of "Inners" (内陣インナー, Innā) and "Outers" (外陣アウトー, Autō), with each of the Inners
+                being in charge of a particular region. Each Inner appears to bear a facial tattoo of a Roman
+                numeral and wears a black hooded cloak with coloured lining, fastened at the right shoulder with a
+                metal pin; all Inners are regarded as completely monstrous in power.</p>
         </div>
         <div class="container-fluid kara pt-4">
-            <div class="container text-center">
-                <p class="parrafoKara fs-4">
-                    Kara (殻カラ, Viz: The Husk, literally meaning: "Shell" or "Husk") is a secret society[1] formerly led
-                    by Isshiki Ōtsutsuki, and later by Code.
 
-                    The group is made up of "Inners" (内陣インナー, Innā) and "Outers" (外陣アウトー, Autō), with each of the Inners
-                    being in charge of a particular region. Each Inner appears to bear a facial tattoo of a Roman
-                    numeral and wears a black hooded cloak with coloured lining, fastened at the right shoulder with a
-                    metal pin; all Inners are regarded as completely monstrous in power.</p>
-            </div>
-            <div class="container d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5" id="contenedorKara">
+            <div class="container-fluid d-flex flex-wrap justify-content-center gap-4 p-4 gap-lg-5" id="contenedorKara">
             </div>
         </div>
-        <div class="containerDiv tituloClans container py-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
+
+        <div class="containerDiv backDark tituloClans container py-5 d-flex justify-content-center">
+            <img class="mt-4 tituloSection" src="./Imgs/clans.png" alt="" data-anijs="if: mouseover, on: .tituloSection,
         do: flip animated">
-            <img class="mt-4 tituloSection" src="./Imgs/clans.png" alt="">
         </div>
         <div class="container-fluid clans pt-4">
             <div class="container d-flex justify-content-center mt-4 text-center">
@@ -178,32 +214,13 @@
                     are known today.</p>
             </div>
             <div class="d-flex justify-content-center container">
-                <button type="button" class="btn fw-bolder mt-5 botonAll">See all Clans  > > > </button>
+                <button type="button" class="btn fw-bolder mt-5 botonAll">See all Clans > > > </button>
             </div>
 
 
         </div>
-        <div class="containerDiv tituloClans py-5 d-flex justify-content-center" data-anijs="if: mouseover, on: .containerDiv,
-        do: rubberBand animated">
-            <img class="mt-4 tituloSection" src="./Imgs/tailed.png" alt="">
-        </div>
-        <div class="container-fluid tailed pt-4">
-            <div class="container text-center">
-
-                <p class="parrafoKara mx-3 my-4 fs-4">
-                    The tailed beasts (尾獣, bijū), sometimes referred to as "Chakra Monsters" (チャクラのバケモノ, Chakura no
-                    Bakemono), are the nine titanic living forms of chakra created by the Sage of Six Paths out of
-                    the chakra from Earth's Ten-Tails. They are differentiated by the number of tails they have,
-                    ranging from one to nine.</p>
-            </div>
-            <div class="contenedorVideo container d-flex justify-content-center ">
-                <video class="videoTailed" src="./Imgs/tailed.mp4" type="video/mp4" loop autoplay muted></video>
-                <button type="button" class="btn fw-bolder my-auto mx-auto botonAll">See more details  > > > </button>
-            </div>
-            
-        </div>
-        <div class="containerDiv tituloClans py-5 d-flex justify-content-center">
-            <img class="tituloSection yey" src="./Imgs/akatsuki.png" data-anijs="if: mouseover, on: .yey
+        <div class="containerDiv backDark tituloClans py-5 d-flex justify-content-center">
+            <img class="tituloSection" src="./Imgs/akatsuki.png" data-anijs="if: mouseover, on: .tituloSection,
             do: flip animated" alt="">
         </div>
         <div class="container-fluid akatsuki pt-4">
@@ -239,14 +256,18 @@
         </div>
     </footer>
 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./Objs/index.js" type="module"></script>
+    <script src="anijs-master/src/anijs.js"></script>
+
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="./Objs/index.js" type="module"></script>
-<script src="anijs-master/src/anijs.js"></script>
 
 </html>

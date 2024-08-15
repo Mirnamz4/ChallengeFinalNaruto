@@ -61,8 +61,10 @@ function change() {
                 tarjeta.className = "card tarjetaCharacter"
                 tarjeta.id = `tarjetaTrans`
 
-                tarjeta.innerHTML = `
-    <img src="${data.images[0]}" class="card-img-top p-2">
+
+                tarjeta.innerHTML = ` 
+                <img src="${data.images[0]}" class="card-img-top p-2">
+  
 
     <div class="card-body text-center d-flex row">
         <h5 class="card-title fw-bold"> ${data.name} </h5>
