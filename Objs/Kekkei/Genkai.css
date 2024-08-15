@@ -2,7 +2,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: #f15b04; */
     background-color: #17141d;
+    /* background-image: url(./naruto-manga-pictures-t44lxgnk8jlfh1ab.jpg); */
+    background-position: center;
+    
 }
 
 /* Estilos intro sección */
@@ -86,6 +90,16 @@ body {
     gap: 10px;
     width: 100%;
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    justify-content: center; /* Centrar las tarjetas */
+}
+
 
 .cards-container {
     display: flex;
@@ -210,6 +224,99 @@ body {
     font-size: 1.2rem;
 }
 
+.filtritos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 120px;
+    padding-left: 100px;
+}
 
+.videosep{
+    height: 200px;
+    width: 100%;
+}
   
-  
+  #sec{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  #page3 {
+    
+    width: 100%;
+    
+}
+
+.intro-tailed-beasts {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#tailed-beast-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+
+.tailed-beasts-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 50%; /* Two cards per row on medium screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 33.33%; /* Three cards per row on large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #intro-video {
+        height: 50vh; /* Reduce video height on small screens */
+    }
+
+    .intro-overlay {
+        font-size: 14px;
+    }
+
+    .intro-overlay p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100%; /* Full width on extra small screens */
+    }
+}
