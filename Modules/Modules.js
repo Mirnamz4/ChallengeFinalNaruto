@@ -70,11 +70,9 @@ export function change() {
                 tarjeta.className = "card tarjetaCharacter"
                 tarjeta.id = `tarjetaTrans`
 
-
                 tarjeta.innerHTML = ` 
-                <img src="${data.images[0] || '../Imgs/incognito.jpg'}" class="card-img-top p-2">
-  
-`
+                <img src="${data.images[0] || '../Imgs/incognito.jpg'}" class="card-img-top p-2">`
+
                 contenedorPersonajes.appendChild(tarjeta)
             })
     }
