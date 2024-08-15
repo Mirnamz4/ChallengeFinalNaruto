@@ -1,6 +1,6 @@
 import * as zir from "./z-mod.js";
 
-let url = "https://narutodb.xyz/api/character?page=1&limit=10"
+let url = "https://narutodb.xyz/api/character?page=1&limit=100"
 
 fetch(url)
     .then(resp => resp.json())

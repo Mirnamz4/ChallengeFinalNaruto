@@ -1,7 +1,7 @@
 export function identifyCategories(characters) {
     let categories = []
-    for (let char of characters) {
-        let category = char.personal.affiliation ? char.personal.affiliation : "Without Affiliation"
+    for (let character of characters) {
+        let category = character.personal.affiliation ? character.personal.affiliation : "Without Affiliation"
         if (Array.isArray(category)) {
             categories.push(...category)
         } else {
@@ -104,7 +104,9 @@ export function filterCategory(characters) {
     if (categoriesChecked.length > 0) {
         let charactersFilter = []
         for (let category of categoriesChecked) {
-            let charactersByCategory = characters.filter(character => character.category.includes(category))
+            let charactersByCategory = characters.filter(character => 
+                Array.isArray(character.personal.affiliation)? character.personal.affiliation.includes(category) 
+                : character.personal.affiliation == category)
             charactersFilter = charactersFilter.concat(charactersByCategory)
         }
         return charactersFilter
