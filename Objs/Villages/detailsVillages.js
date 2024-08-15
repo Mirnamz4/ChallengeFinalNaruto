@@ -4,16 +4,18 @@ const urlS = new URLSearchParams(window.location.search);
 let idMagik = urlS.get('id')
 let contenedorc = document.getElementById("contenedorDetalleVilla")
 let imagend = document.createElement('div')
+imagend.className= "d-flex justify-content-center"
 imagend.innerHTML = `
-<img src="../../Imgs/Villas/${idMagik}.png " class="card-img-top h-50 p-2"> `
+<img src="../../Imgs/Villas/${idMagik}.png " class="card-img-top detaiL h-50 p-2"> `
 contenedorc.appendChild(imagend)
 
 fetch("https://narutodb.xyz/api/village/" + idMagik)
     .then(response => response.json())
     .then(data => {
         let nombre = document.createElement('div')
+        nombre.className ="d-flex justify-content-center pb-2"
         nombre.innerHTML = `
-<h5 class="card-title text-center fs-2 tituloVi fw-bold"> ${data.name} </h5>`
+<h5 class="card-title detaiL text-center fs-4 tituloVi fw-bold"> ${data.name} </h5>`
         contenedorc.appendChild(nombre)
     })
 
@@ -41,7 +43,7 @@ function pintarPersonajesVillas(array) {
                     let tarjeta = document.createElement('div')
                     tarjeta.className = "card detai col-md-4"
                     tarjeta.innerHTML = `
-<img src="${data.images[0]|| '../../Imgs/incognito.jpg' }  " class="card-img-top h-50 p-2">
+<img src="${data.images[0]|| '../../Imgs/incognito.jpg' }  " class="card-img-top h-50 imagenDetalle p-2">
 
 <div class="card-body text-center d-flex row">
 <h5 class="card-title fw-bold"> ${data.name} </h5>
