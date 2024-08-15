@@ -28,6 +28,10 @@
     position: relative;
     z-index: 0; 
 }
+.villagesTitle{
+    height: 20vh;
+    background-color: black;
+}
 
 .general::before{
     content: '';
@@ -36,12 +40,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./z-img/ch-bg1.jpg);
+    background-color: white;
     background-position: center;
     background-size: cover;
     opacity: 0.2;
     z-index: -1;
     min-height: 70vh;
+}
+.tituloChara{
+    background-color: black;
+    height: 15vh;
 }
 
 .btn-2{

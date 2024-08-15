@@ -52,7 +52,7 @@ export function createCard(character) {
     characterCardGrid.appendChild(characterCard)
 
     let image = document.createElement("img")
-    image.src = character.images[0]
+    image.src = character.images[0] || './Imgs/incognito.jpg'
     image.className = "card-img-top card-img-size"
     characterCard.appendChild(image)
 
