@@ -24,7 +24,6 @@
     max-width: 150px;
 }
 
-
 .general{
     position: relative;
     z-index: 0; 
@@ -43,4 +42,31 @@
     opacity: 0.2;
     z-index: -1;
     min-height: 70vh;
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #1b293a;
+    color: #1b293a;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-2:hover{
+    color: #fffdfc;
+    background-color: #1b293a;
+}
+
+.card-img-size{
+    height: 200px;
+}
+
+.card-desc-size{
+    height: 15vh;
+}
+
+.img-details-size{
+    height: 50vh;
 }

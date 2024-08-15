@@ -1,7 +1,7 @@
 export function identifyCategories(characters) {
     let categories = []
     for (let char of characters) {
-        let category = char.personal.affiliation? char.personal.affiliation : "Without Affiliation"
+        let category = char.personal.affiliation ? char.personal.affiliation : "Without Affiliation"
         if (Array.isArray(category)) {
             categories.push(...category)
         } else {
@@ -9,6 +9,10 @@ export function identifyCategories(characters) {
         }
     }
     let categoriesClean = [... new Set(categories)]
+    categoriesClean = categoriesClean.map(category =>
+        category.includes("Kaneki") ? "Kaneki Corporation"
+            : category.includes("Haze") ? "Land of Haze"
+                : category.includes("Calm Seas") ? "Land of Calm Seas" : category)
     return categoriesClean
 }
 
@@ -39,57 +43,52 @@ export function paintCheckBox(categories, container) {
     }
 }
 
-export function createCard(pers) {
-    let persCardGrid = document.createElement("div")
-    persCardGrid.className = "px-1 py-2 col-sm-12 col-md-6 col-lg-3"
+export function createCard(character) {
+    let characterCardGrid = document.createElement("div")
+    characterCardGrid.className = "px-1 py-2 col-sm-6 col-md-3 col-lg-2"
 
-    let persCard = document.createElement("div")
-    persCard.className = "card"
-    persCardGrid.appendChild(persCard)
+    let characterCard = document.createElement("div")
+    characterCard.className = "card"
+    characterCardGrid.appendChild(characterCard)
 
     let image = document.createElement("img")
-    image.src = pers.images[0]
+    image.src = character.images[0]
     image.className = "card-img-top card-img-size"
-    persCard.appendChild(image)
+    characterCard.appendChild(image)
 
     let bodyCard = document.createElement("div")
     bodyCard.className = "card-body py-2"
-    persCard.appendChild(bodyCard)
+    characterCard.appendChild(bodyCard)
 
     let name = document.createElement("h5")
-    name.textContent = pers.name
+    name.textContent = character.name
     name.className = "card-title mb-1"
     bodyCard.appendChild(name)
 
     let affiliation = document.createElement("p")
-    affiliation.textContent = pers.affiliation.join(" - ")
+    affiliation.textContent = "Affiliation: "
     affiliation.className = "card-text card-desc-size p-0 mb-1 lh-sm"
-    bodyCard.appendChild(description)
+    bodyCard.appendChild(affiliation)
 
     let details = document.createElement("div")
-    details.className = "details d-flex justify-content-between"
+    details.className = "details d-flex flex-column"
     bodyCard.appendChild(details)
 
-    let price = document.createElement("p")
-    price.textContent = "Price: $ " + event.price
-    price.className = "card-text my-2 fs-6 fw-semibold"
-    details.appendChild(price)
-
     let buttonDetails = document.createElement("a")
-    buttonDetails.href = "./details.html?id=" + event._id
+    buttonDetails.href = "./details.html?id=" + character.id
     buttonDetails.innerHTML = "Details"
-    buttonDetails.className = "btn costum-btn"
+    buttonDetails.className = "btn-2 align-self-end"
     details.appendChild(buttonDetails)
 
-    return persCardGrid
+    return characterCardGrid
 }
 
-export function paintCards(events, container) {
+export function paintCards(characters, container) {
     container.innerHTML = ""
-    if (events.length > 0) {
-        for (let event of events) {
-            let eventCard = createCard(event)
-            container.appendChild(eventCard)
+    if (characters.length > 0) {
+        for (let character of characters) {
+            let characterCard = createCard(character)
+            container.appendChild(characterCard)
         }
     } else {
         let noResults = document.createElement("p")
@@ -99,24 +98,23 @@ export function paintCards(events, container) {
     }
 }
 
-export function filterCategory(events) {
+export function filterCategory(characters) {
     let checkBoxesChecked = document.querySelectorAll('input[type = "checkbox"]:checked')
     let categoriesChecked = [...checkBoxesChecked].map(category => category.value)
     if (categoriesChecked.length > 0) {
-        let eventsFilter = []
+        let charactersFilter = []
         for (let category of categoriesChecked) {
-            let eventsByCategory = events.filter(event => event.category.includes(category))
-            eventsFilter = eventsFilter.concat(eventsByCategory)
+            let charactersByCategory = characters.filter(character => character.category.includes(category))
+            charactersFilter = charactersFilter.concat(charactersByCategory)
         }
-        return eventsFilter
+        return charactersFilter
     } else {
-        return events
+        return characters
     }
 }
 
-export function filterText(events) {
+export function filterText(characters) {
     let text = document.getElementById("textSearch").value.toLowerCase()
-    let eventsFilter = events.filter(event => event.name.toLowerCase().includes(text)
-        || event.description.toLowerCase().includes(text))
-    return eventsFilter
+    let charactersFilter = characters.filter(character => character.name.toLowerCase().includes(text))
+    return charactersFilter
 }
