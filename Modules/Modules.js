@@ -1,4 +1,4 @@
-let url = "https://narutodb.xyz/api/village"
+let url = "https://narutodb.xyz/api/village?page=1&limit=38"
 
 fetch(url)
     .then(response => response.json())

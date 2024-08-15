@@ -14,11 +14,15 @@
     background-color: black;
 }
 .tituloVi{
-    background-color: orange;
+    COLOR: rgb(201, 201, 195);
 }
+.detaiL{
+    width: 50vw;
+}
+
 .tarjetaVilla {
     width: 30rem;
-    background-color: rgba(255, 202, 103, 0.452);
+    background-color: rgb(247, 174, 90);
     height: 30rem;
     border: 4px rgb(73, 64, 64) solid;
 }
