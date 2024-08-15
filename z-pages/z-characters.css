@@ -19,6 +19,9 @@
     flex-wrap: wrap;
     margin-bottom: 1rem;
 }
+.tarjetaCA{
+    background-color: bisque;
+}
 
 .title-img{
     max-width: 150px;

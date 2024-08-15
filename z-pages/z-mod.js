@@ -48,7 +48,7 @@ export function createCard(character) {
     characterCardGrid.className = "px-1 py-2 col-sm-6 col-md-3 col-lg-2"
 
     let characterCard = document.createElement("div")
-    characterCard.className = "card"
+    characterCard.className = "card tarjetaCA"
     characterCardGrid.appendChild(characterCard)
 
     let image = document.createElement("img")
@@ -62,7 +62,7 @@ export function createCard(character) {
 
     let name = document.createElement("h5")
     name.textContent = character.name
-    name.className = "card-title mb-1"
+    name.className = "card-title  mb-1"
     bodyCard.appendChild(name)
 
     let affiliation = document.createElement("p")
@@ -71,13 +71,13 @@ export function createCard(character) {
     bodyCard.appendChild(affiliation)
 
     let details = document.createElement("div")
-    details.className = "details d-flex flex-column"
+    details.className = "details  d-flex flex-column"
     bodyCard.appendChild(details)
 
     let buttonDetails = document.createElement("a")
     buttonDetails.href = "./details.html?id=" + character.id
     buttonDetails.innerHTML = "Details"
-    buttonDetails.className = "btn-2 align-self-end"
+    buttonDetails.className = "btn-2 botonAll  fw-bold align-items-center d-flex justify-content-center align-self-end"
     details.appendChild(buttonDetails)
 
     return characterCardGrid

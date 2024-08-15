@@ -29,6 +29,7 @@
 .detai{
     background-color: rgb(241, 220, 192);
     width: 18rem;
+    height: 19rem;
     border-radius: 20px;
 }
 .dividir{
@@ -37,6 +38,10 @@
 }
 .foto{
     border-radius: 25px;
+}
+.starV{
+    height: 3rem;
+    width: 3rem;
 }
 .villagesTitle{
     height: 20vh;
@@ -61,4 +66,83 @@
     color: rgb(0, 0, 0);
     border: 3px black solid;
     font-weight: 600;
+}
+
+/* Modal */
+
+
+.boton-modal label{
+    padding: 10px 15px;
+    background-color: rgb(255, 166, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    cursor: poiner;
+    transition: all 300mx ease;
+}
+.boton-modal:hover{
+    background-color: rgb(116, 177, 196);
+}
+#btn-modal{
+    display: none;
+}
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(210, 105, 30, 0.651);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.content-modal{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+.content-modal h2{
+    margin-bottom: 15px;
+
+}
+.content-modal p{
+    padding: 15% 0;
+    border-top: 1px solid rgb(236, 213, 213);
+    border-bottom: 1 px solid rgb(250, 216, 216);
+}
+.content-modal btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container-modal .btn cerrar label{
+    padding: 7px 10px;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    border-radius: 8px;
+    cursor: poiner;
+    transition: all 300mx ease;
+}
+.container-modal .btn cerrar label:hover{
+    background-color: aqua;
+}
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+}
+.cerrar-modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+@media screen and (max-width:800px) {
+    .content-modal{
+        width: 90%;
+    }
 }

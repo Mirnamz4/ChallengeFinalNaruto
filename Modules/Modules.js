@@ -9,46 +9,16 @@ export let arregloCompleto = await fetch(url)
 export let data = await arregloCompleto.json()
 export let villas = data.villages
 
-export function pintarVillas(arreglo) {
-    let contenedorVillages = document.getElementById("contenedorVillages")
-    contenedorVillages.innerHTML = ""
+let url2 = "https://narutodb.xyz/api/clan?page=1&limit=32"
+fetch(url2)
+    .then(response => response.json())
+    .catch(e => console.log(e))
 
-    if (arreglo.length > 0) {
-        for (let i = 0; i < arreglo.length; i++) {
-            let tarjeta = document.createElement('div')
-            tarjeta.className = "card tarjetaVilla col-md-4"
-            tarjeta.id = `tarjetaTrans`
+export let arregloCompleto2 = await fetch(url2)
+export let data2 = await arregloCompleto2.json()
+export let clans = data2.clans
 
-            tarjeta.innerHTML = `
-            <img src="../../Imgs/Villas/${arreglo[i].id}.png " class="card-img-top foto h-50 p-2">
-        
-            <div class="card-body text-center d-flex row">
-                <h5 class="card-title fw-bold"> ${arreglo[i].name} </h5>
-                <h5 class="card-title fw-bold"> Characters: ${arreglo[i].characters.length} </h5>
-              <div class="d-flex justify-content-center">
-                <a href="./detailsVillages.html?id=${arreglo[i].id}" class="btn w-50 mb-2 " id="detailsB">Characters</a>  
-            </div>
-                <img class="js ms-auto mb-4 " src="../../Imgs/boton.png" alt=""  data-anijs="if: mouseover, on: .js,
-                do: wobble animated"
-                </div> `
-            contenedorVillages.appendChild(tarjeta)
-        }
-    }
-    else {
-        let tarjeta = document.createElement('div')
-        tarjeta.className = "card tarjetaVilla col-md-4"
-        tarjeta.id = `tarjetaTrans`
 
-        tarjeta.innerHTML = `
-         <img src="../../Imgs/triste.webp " class="card-img-top foto h-50 p-2">
-        <div class="card-body text-center d-flex row">
-                <h5 class="card-title mt-3 fw-bold"> Not results found :(. Try it again with other characters. </h5>
-                  
-            </div> `
-        contenedorVillages.appendChild(tarjeta)
-    }
-
-}
 
 export function change() {
 

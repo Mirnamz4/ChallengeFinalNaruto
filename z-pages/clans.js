@@ -1,10 +1,52 @@
-import { pintarC, villas } from "../../Modules/Modules.js"
+import {clans} from "../Modules/Modules.js"
 
-pintarVillas(villas)
+console.log(clans);
+
+pintarClans(clans)
+
+function pintarClans(arreglo) {
+    let contenedorClanes = document.getElementById("contenedorClanes")
+    contenedorClanes.innerHTML = ""
+
+    if (arreglo.length > 0) {
+        for (let i = 0; i < arreglo.length; i++) {
+            let tarjeta = document.createElement('div')
+            tarjeta.className = "card tarjetaClan col-md-4"
+            tarjeta.id = `tarjetaTrans`
+
+            tarjeta.innerHTML = `
+            
+            <div class="card-body text-center d-flex row">
+                <h5 class="card-title fs-3 fw-bold"> ${arreglo[i].name} </h5>
+                <h5 class="card-title fs-6"> Characters: ${arreglo[i].characters.length} </h5>
+              <div class="d-flex justify-content-center">
+                <a href="../z-pages/detailsClans.html?id=${arreglo[i].id}" class="btn w-50 mb-2 " id="detailsB">Characters</a>  
+            </div>
+                <img class="js ms-auto pb-3 " src="../../Imgs/boton.png" alt=""  data-anijs="if: mouseover, on: .js,
+                do: wobble animated"
+                </div> `
+            contenedorClanes.appendChild(tarjeta)
+        }
+    }
+    else {
+        let tarjeta = document.createElement('div')
+        tarjeta.className = "card tarjetaNot col-md-4"
+        tarjeta.id = `tarjetaTrans`
+
+        tarjeta.innerHTML = `
+         <img src="../../Imgs/triste.webp " class="card-img-top foto h-50 p-2">
+        <div class="card-body text-center  d-flex row">
+                <h5 class="card-title mt-3 fw-bold"> Not results found :(. Try it again with other characters. </h5>
+                  
+            </div> `
+        contenedorClanes.appendChild(tarjeta)
+    }
+
+}
 
 document.getElementById("busqueda").addEventListener('keyup', e => {
 
-    let filtradosTexto = filtroDeTexto(villas)
+    let filtradosTexto = filtroDeTexto(clans)
     let check = document.getElementById("one")
     let check1 = document.getElementById("two")
     let check2 = document.getElementById("three")
@@ -14,26 +56,26 @@ document.getElementById("busqueda").addEventListener('keyup', e => {
     
     if (checksConPalomita.length == 2){
         let nuevo = recorrer(filtradosTexto)
-        pintarVillas(nuevo)
+        pintarClans(nuevo)
     }
     else if (checksConPalomita.length == 3){
-        pintarVillas(filtradosTexto)
+        pintarClans(filtradosTexto)
     }
     else if (checksConPalomita == 0){
-        pintarVillas(filtradosTexto) 
+        pintarClans(filtradosTexto) 
     }
     else{
         if (check.checked){
             let filtrar = one(filtradosTexto)
-            pintarVillas(filtrar)
+            pintarClans(filtrar)
         }
         else if (check1.checked){
             let filtrar = two(filtradosTexto)
-            pintarVillas(filtrar)
+            pintarClans(filtrar)
         }
         else if (check2.checked){
             let filtrar = three(filtradosTexto)
-            pintarVillas(filtrar)
+            pintarClans(filtrar)
         }
     }
     
@@ -42,8 +84,8 @@ document.getElementById("busqueda").addEventListener('keyup', e => {
 function filtroDeTexto(a) {
     
     let buscadorHome = document.getElementById("busqueda").value.toLowerCase()
-    let filtrado = a.filter(nota =>
-        nota.name.toLowerCase().includes(buscadorHome))
+    let filtrado = a.filter(clan =>
+        clan.name.toLowerCase().includes(buscadorHome))
     return filtrado;
 }
 
@@ -54,18 +96,18 @@ document.getElementById("one").addEventListener('change', e => {
     checksConPalomita = checksConPalomita.map(e => e.value)
     
     if (checksConPalomita.length == 2){
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevo = recorrer(filtrados)
-        pintarVillas(nuevo)
+        pintarClans(nuevo)
     }
     else if (checksConPalomita.length == 3){
-        let filtrados = filtroDeTexto(villas)
-        pintarVillas(filtrados)
+        let filtrados = filtroDeTexto(clans)
+        pintarClans(filtrados)
     }
     else{
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevos = one(filtrados)
-        pintarVillas(nuevos) 
+        pintarClans(nuevos) 
     }
          
 })
@@ -75,18 +117,18 @@ document.getElementById("two").addEventListener('change', e => {
     checksConPalomita = checksConPalomita.map(e => e.value)
     
     if (checksConPalomita.length == 2){
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevo = recorrer(filtrados)
-        pintarVillas(nuevo)
+        pintarClans(nuevo)
     }
     else if (checksConPalomita.length == 3){
-        let filtrados = filtroDeTexto(villas)
-        pintarVillas(filtrados)
+        let filtrados = filtroDeTexto(clans)
+        pintarClans(filtrados)
     }
     else{
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevos = two(filtrados)
-        pintarVillas(nuevos) 
+        pintarClans(nuevos) 
     }
 })
 
@@ -95,18 +137,18 @@ document.getElementById("three").addEventListener('change', e => {
     checksConPalomita = checksConPalomita.map(e => e.value)
     
     if (checksConPalomita.length == 2){
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevo = recorrer(filtrados)
-        pintarVillas(nuevo)
+        pintarClans(nuevo)
     }
     else if (checksConPalomita.length == 3){
-        let filtrados = filtroDeTexto(villas)
-        pintarVillas(filtrados)
+        let filtrados = filtroDeTexto(clans)
+        pintarClans(filtrados)
     }
     else{
-        let filtrados = filtroDeTexto(villas)
+        let filtrados = filtroDeTexto(clans)
         let nuevos = three(filtrados)
-        pintarVillas(nuevos) 
+        pintarClans(nuevos) 
     }
 })
 
@@ -159,53 +201,3 @@ function three(array) {
         return array
     }
 }
-let favoritos = []
-
-function agregarFavorito(aldea){
-    console.log("sfdsfd");
-    
-}
-
-function pintarVillas(arreglo) {
-    let contenedorVillages = document.getElementById("contenedorVillages")
-    contenedorVillages.innerHTML = ""
-
-    if (arreglo.length > 0) {
-        for (let i = 0; i < arreglo.length; i++) {
-            let tarjeta = document.createElement('div')
-            tarjeta.className = "card tarjetaVilla col-md-4"
-            tarjeta.id = `tarjetaTrans`
-
-            tarjeta.innerHTML = `
-            <img src="../../Imgs/Villas/${arreglo[i].id}.png " class="card-img-top foto h-50 p-2">
-        
-            <div class="card-body text-center d-flex row">
-                <h5 class="card-title fw-bold"> ${arreglo[i].name} </h5>
-                <h5 class="card-title fw-bold"> Characters: ${arreglo[i].characters.length} </h5>
-              <div class="d-flex justify-content-center">
-                <a href="./detailsVillages.html?id=${arreglo[i].id}" class="btn w-50 mb-2 " id="detailsB">Characters</a>  
-            </div>
-            <button onclick='agregarFavorito(${arreglo[i].id})' class="btn"><img src="../../Imgs/starVacia.png" class="card-img-top starV"></button>
-                
-                <img class="js ms-auto pb-3 " src="../../Imgs/boton.png" alt=""  data-anijs="if: mouseover, on: .js,
-                do: wobble animated"
-                </div> `
-            contenedorVillages.appendChild(tarjeta)
-        }
-    }
-    else {
-        let tarjeta = document.createElement('div')
-        tarjeta.className = "card tarjetaVilla col-md-4"
-        tarjeta.id = `tarjetaTrans`
-
-        tarjeta.innerHTML = `
-         <img src="../../Imgs/triste.webp " class="card-img-top foto h-50 p-2">
-        <div class="card-body text-center d-flex row">
-                <h5 class="card-title mt-3 fw-bold"> Not results found :(. Try it again with other characters. </h5>
-                  
-            </div> `
-        contenedorVillages.appendChild(tarjeta)
-    }
-
-}
-
