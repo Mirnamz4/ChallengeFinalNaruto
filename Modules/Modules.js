@@ -13,12 +13,13 @@ export function pintarVillas(arreglo) {
     let contenedorVillages = document.getElementById("contenedorVillages")
     contenedorVillages.innerHTML = ""
 
-    for (let i = 0; i < arreglo.length; i++) {
-        let tarjeta = document.createElement('div')
-        tarjeta.className = "card tarjetaVilla col-md-4"
-        tarjeta.id = `tarjetaTrans`
+    if (arreglo.length > 0) {
+        for (let i = 0; i < arreglo.length; i++) {
+            let tarjeta = document.createElement('div')
+            tarjeta.className = "card tarjetaVilla col-md-4"
+            tarjeta.id = `tarjetaTrans`
 
-        tarjeta.innerHTML = `
+            tarjeta.innerHTML = `
             <img src="../../Imgs/Villas/${arreglo[i].id}.png " class="card-img-top foto h-50 p-2">
         
             <div class="card-body text-center d-flex row">
@@ -30,6 +31,20 @@ export function pintarVillas(arreglo) {
                 <img class="js ms-auto mb-4 " src="../../Imgs/boton.png" alt=""  data-anijs="if: mouseover, on: .js,
                 do: wobble animated"
                 </div> `
+            contenedorVillages.appendChild(tarjeta)
+        }
+    }
+    else {
+        let tarjeta = document.createElement('div')
+        tarjeta.className = "card tarjetaVilla col-md-4"
+        tarjeta.id = `tarjetaTrans`
+
+        tarjeta.innerHTML = `
+         <img src="../../Imgs/triste.webp " class="card-img-top foto h-50 p-2">
+        <div class="card-body text-center d-flex row">
+                <h5 class="card-title mt-3 fw-bold"> Not results found :(. Try it again with other characters. </h5>
+                  
+            </div> `
         contenedorVillages.appendChild(tarjeta)
     }
 
