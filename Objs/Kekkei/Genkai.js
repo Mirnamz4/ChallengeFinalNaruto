@@ -7,8 +7,8 @@ fetch(apiUrl)
     .then(data => {
         kekkeiData = data.kekkeigenkai;
         setupFilter();
-        setupSearch();  // Configurar el filtro de búsqueda
-        displayCards(); // Mostrar todas las tarjetas inicialmente
+        setupSearch();  
+        displayCards(); 
     })
     .catch(error => console.error('Error:', error));
 
@@ -38,7 +38,7 @@ function displayCards(filterId = '0', searchQuery = '') {
                         // Determinar el color del footer basado en el kekkei genkai
                         const footerColor = getKekkeiGenkaiColor(kekkeiId);
 
-                        // Creación de la estructura de la tarjeta
+                       
                         card.innerHTML = `
                             <img src="${imageUrl}" alt="${character.name}">
                             <div class="card-footer" style="background-color: ${footerColor}">
@@ -55,17 +55,17 @@ function displayCards(filterId = '0', searchQuery = '') {
     });
 }
 
-// Función para configurar el filtro basado en el `<select>`
+// Función `<select>`
 function setupFilter() {
     const selectElement = document.getElementById('inputGroupSelect01');
     selectElement.addEventListener('change', () => {
         const selectedValue = selectElement.value;
         const searchQuery = document.querySelector('.input').value;
-        displayCards(selectedValue, searchQuery); // Mostrar las tarjetas filtradas
+        displayCards(selectedValue, searchQuery); 
     });
 }
 
-// Función para configurar el filtro de búsqueda por texto
+// Función búsqueda por texto
 function setupSearch() {
     const searchInput = document.querySelector('.input');
     searchInput.addEventListener('keyup', () => {
@@ -75,7 +75,7 @@ function setupSearch() {
     });
 }
 
-// Función para obtener el color del footer basado en el ID del kekkei genkai
+// Función para obtener el color del footer 
 function getKekkeiGenkaiColor(id) {
     switch (id) {
         case '1': return '#ffcccc';
@@ -83,15 +83,15 @@ function getKekkeiGenkaiColor(id) {
         case '3': return '#ccccff';
         case '4': return '#ffffcc';
         case '5': return '#ffccff';
-        // Añadir más colores para otros kekkei genkai
-        default: return '#f5f5f5'; // Color por defecto
+       
+        default: return '#f5f5f5'; 
     }
 }
 
 
 
 
-    const apiUrl2 = 'https://narutodb.xyz/api/tailed-beast'; // Cambia a la URL correcta para tailed beasts
+    const apiUrl2 = 'https://narutodb.xyz/api/tailed-beast'; 
 
     fetch(apiUrl2)
         .then(response => response.json())
@@ -106,9 +106,9 @@ function getKekkeiGenkaiColor(id) {
         data.tailedBeasts.forEach(beast => {
             const card = document.createElement('div');
             card.className = 'card';
-            const imageUrl2 = beast.images && beast.images[0] ? beast.images[0] : './1248760.png'; // URL de imagen predeterminada
+            const imageUrl2 = beast.images && beast.images[0] ? beast.images[0] : './1248760.png'; 
     
-            // Creación de la estructura de la tarjeta
+            
             card.innerHTML = `
                 <img src="${imageUrl2}" alt="${beast.name}">
                 <div class="card-footer">
